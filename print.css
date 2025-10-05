@@ -1,0 +1,97 @@
+
+@media print {
+  body {
+    background-color: #fff;
+    color: #000;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Hide everything except the shopping list card */
+  header,
+  form,
+  .results-section > .adjustment-form,
+  .result-card:not(.shopping-list-card),
+  .card-actions,
+  .social-sharing,
+  .rationale-card,
+  .edit-ingredients-btn,
+  .modal-overlay,
+  .financial-summary-card,
+  .language-selector-wrapper,
+  .dietary-needs-group {
+    display: none !important;
+  }
+
+  /* Reset container styles for printing */
+  .container, #root {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  /* Ensure the shopping list card is visible and takes up the full width */
+  .results-section,
+  .results-container,
+  .shopping-list-card {
+    display: block !important;
+    grid-template-columns: 1fr !important;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  .shopping-list-card h3 {
+    font-size: 1.5rem;
+    color: #000;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .result-list li {
+    border-bottom: 1px solid #ccc;
+    padding: 0.5rem 0;
+  }
+  
+  .result-list .item-quantity {
+    color: #333;
+  }
+  
+  .shopping-list-card .item-price-container {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+  }
+
+  .shopping-list-card .item-price-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background: none;
+    box-shadow: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    color: #000;
+    font-weight: normal;
+    text-align: start;
+    width: auto;
+  }
+
+  .shopping-list-card .item-price-currency {
+      color: #000;
+      padding-inline-start: 4px;
+  }
+
+
+  /* Remove links from print view */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "Copy of Event Food Calculator",
+  "description": "An app to calculate food quantities and generate a shopping list for events using Gemini.",
+  "requestFramePermissions": []
+}
